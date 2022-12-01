@@ -1,0 +1,191 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button, summary {
+	cursor: pointer;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text:#111;
+	--color-background:#eee;
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/*STYLING HOMEPAGINA **************************************************************************************************************************************/
+
+/* nav bar bovenaan pagina */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* nav bar bovenaan pagina */
+
+nav a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    margin-inline: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+header img {
+	width: 70px; 
+	height: 50px;
+}
+
+/* Algemene styling */
+
+h2, h3, p {
+	color: blue;
+	text-align: center;
+}
+
+img {
+	max-width: 100%;
+}
+
+ul {
+	margin:0;
+	padding: 0;
+}
+
+li {
+	text-decoration: none;
+}
+
+/* Styling eerste section HOE GAAT DE MARGIN BIJ DE FOTO WEG */
+
+section:first-of-type img {
+	display: block;
+}
+
+div {
+	background-color: black;
+	padding: 3em;
+}
+
+/* buttons eerste sectie HOE GAAN DIE IN HET MIDDEN HELP */
+section:first-of-type a {
+	background-color: red;
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+	padding: 0.3em;
+	display: flex;
+	justify-content: center;
+}
+
+section:first-of-type a:nth-of-type(2) {
+	background-color: black;
+}
+
+/* Styling tweede section */
+
+section:nth-of-type(2) a {
+	background-color: red;
+	margin: 0.8em;
+}
+
+section:nth-of-type(2) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr) ); 
+}
+
+section:nth-of-type(2) li {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Styling derde section PLAATJES MOETEN IN HET MIDDEN */
+
+section:nth-of-type(3) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) ); 
+}
+
+section:nth-of-type(3) a {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+}
+
+section:nth-of-type(3) li img {
+	width: 100px;
+	height: 275px;
+}
+
+/* Styling vierde section*/
+
+section:nth-of-type(4) li {
+	margin: 10px;
+}
+
+section:nth-of-type(4) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr) ); 
+}
+
+/* styling vijfde section */
+
+section:nth-of-type(5) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) ); 
+}
+
+section:nth-of-type(5) a {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+}
+
+section:nth-of-type(5) li img {
+	height: 200px;
+}
+
+footer {
+	background-color: #111;
+	color: white;
+	Padding: 3em;
+}
+
+
+/*STYLING PRODUCTPAGINA **************************************************************************************************************************************/
+
+.productpagina section:first-of-type {
+	background-color: white;
+}
+
+/* mediaquery gebruiken voor responsive */
+
+/* section:nth-of-type(4) > ul:nth-of-type(4) > li : hiermee spreek je de 4e section aan, de 4e ul in die section en dan de list items */
