@@ -18,17 +18,419 @@ button, summary {
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
+	--color-text-sec1-2:white;
 	--color-background:#eee;
 }
-
-
-
 
 
 /****************/
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+html {
+	font-family: 'Montserrat', sans-serif;
+}
 
+/*NOG AANPASSEN */
+a:focus-visible {
+	background-color: hotpink;
+	border: 10px dashed hotpink;
+}
+
+header img {
+	width: 70px; 
+	height: 50px;
+}
+
+/* Algemene styling */
+
+body {
+	margin: 0;
+	padding: 0;
+	
+}
+
+p {
+	margin-top: 0.4rem;
+}
+
+h3, p {
+	text-align: center;
+}
+
+h3 {
+	color: black;
+}
+
+h2 {
+	text-decoration: underline red;
+	margin-left: 0.9em;
+	margin-right: 0.9em;
+}
+
+img {
+	max-width: 100%;
+}
+
+iframe {
+	max-width: 100%;
+	margin-top: 3rem;
+}
+
+ul {
+	margin:0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+/*STYLING HOMEPAGINA **************************************************************************************************************************************/
+
+/* Styling eerste section */
+
+section:first-of-type p, .wit {  /* MAG DEZE CLASS ********************** */
+	color: var(--color-text-sec1-2);
+	text-decoration: none;
+	text-align: center;
+}
+
+section:first-of-type img {
+	display: block;
+}
+
+div {
+	background-color: black;
+	padding: 3em;
+}
+
+section:first-of-type a:nth-of-type(2) {
+	background-color: black;
+}
+
+/* buttons eerste sectie*/
+section:first-of-type a {
+	background-color: red;
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+	padding: 0.3em;
+	display: flex;
+	justify-content: center;
+}
+
+/* Styling tweede section */
+
+section:nth-of-type(2) h3 {
+	color: white;
+}
+
+section:nth-of-type(2) > ul > li > a > p, h3 {
+	color: var(--color-text-sec1-2);
+}
+
+section:nth-of-type(2) a {
+	background-color: red;
+	margin: 0.8em;
+}
+
+section:nth-of-type(2) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr) ); 
+}
+
+section:nth-of-type(2) li {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Styling derde section */
+
+section:nth-of-type(3) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) ); 
+}
+
+section:nth-of-type(3) a {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	margin: 0.9em;
+}
+
+section:nth-of-type(3) li img {
+	width: 150px;
+	height: 450px;
+}
+
+section:nth-of-type(3) p {  /* WAAROM TWEEDE p IN DE LINK NIET RECHTS!!!??*/
+	text-align: left;
+}
+
+/* Styling vierde section*/
+
+section:nth-of-type(4) h2 { /* HOE MARGIN KORTER SCHRIJVEN EN HOE STREEP ONDER 'FENDER FEED' WEG */
+	text-align: center;
+	background-color: red;
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	padding: 1rem;
+	color: white;
+}
+
+section:nth-of-type(4) a {
+	border-style: solid ;
+	display: block;
+}
+
+section:nth-of-type(4) h3, p {
+	color: #111;
+}
+
+section:nth-of-type(4) li {
+	margin: 10px;
+}
+
+section:nth-of-type(4) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr) ); 
+}
+
+/* styling vijfde section */
+
+section:nth-of-type(5) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) ); 
+}
+
+section:nth-of-type(5) a {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	margin: 0.9em;
+	background-color: #f9f9f9;
+}
+
+section:nth-of-type(5) li img {
+	width: 250px;
+	height: 350px;
+}
+
+footer {
+	background-color: #111;
+	color: white;
+	Padding: 3em;
+}
+
+
+/*STYLING PRODUCTPAGINA **************************************************************************************************************************************/
+
+/*Algemene styling*/
+
+.productpagina h2 {
+	text-align: left;
+	color:#111;
+}
+
+.productpagina h3 {
+	color: #111;
+}
+
+.productpagina main {
+	margin: 1rem;
+}
+
+/* Styling eerste section, HOE AL DIE P'S STIJLEN ZONDER CLASSES?????????? */
+
+.productpagina section:first-of-type {
+	background-color: white;
+}
+
+.productpagina section:first-of-type p {
+	text-align: left;
+	color: #111;
+}
+
+.productpagina section:first-of-type img {
+	background-color: #f9f9f9;
+}
+
+/* Styling tweede section */
+
+.productpagina section:nth-of-type(2) > ul > li {  /*WAAROM WERKT DIT NIET*/
+	display: list-item;
+	list-style-type: square;
+	margin-left: 1rem;
+	margin-top: 0.5rem;;
+}
+
+.productpagina section:nth-of-type(2) h2 {
+	margin-left: 0;
+}
+
+/* Styling derde section, uitklapmenu highlights*/
+
+.productpagina section:nth-of-type(3) {
+	position:relative; /* zodat de button binnen de setcion blijft */
+}
+
+.productpagina section:nth-of-type(3) button {
+	position:absolute; 
+	top:0;
+}
+
+.productpagina section:nth-of-type(3) ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+	max-height:0; 
+	overflow:hidden; 
+	
+	transition:.3s; 
+}
+
+.productpagina section:nth-of-type(3) ul.open {
+	max-height:4em; 
+} 
+
+/* Styling vierde section */
+
+.productpagina section:nth-of-type(4) h2 {
+	color: black;
+	background-color: white;
+	text-decoration-style: dotted;
+}
+
+section:nth-of-type(4) p {
+	font-size: small;
+}
+
+.productpagina section:nth-of-type(4) a {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	border-style: none;
+}
+
+.productpagina section:nth-of-type(4) li img {  
+	width: 100px;
+	height: 200px;
+}
+
+/* Styling hamburger menu  NOG MOOI MAKEN EN LINKJES GOED ZETTEN IN HTML. KAN RESPONSIVE ALS TIJD OVER*/ 
+
+header {
+	position:sticky;
+	top:0;
+}
+
+header ul {
+	min-height:4em;
+	padding:0 1em;
+	line-height:1;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	background-color: white;
+	opacity: 90%;
+}
+
+header button {
+	padding:.5em;
+	display:flex;
+	align-items:center;
+	gap:.25em;
+
+	appearance:none;
+	border:none;
+	border-radius:.25em; 
+	font:inherit;
+	text-align:center;
+  }
+  
+  header button img {
+	height:1.5em;
+	width: 2em;
+  }
+
+  header > button {
+	order:-1;
+  }
+  
+  nav button {
+	justify-self:start;
+   }
+   
+   nav { 
+	padding:1em;
+	display:grid;
+	align-content:start;
+	gap:1em;
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background-color: white;
+	
+	transform:translatex(-100%);
+	
+	transition:transform .3s;
+  }
+
+  nav ul {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1em;
+  }
+  
+  nav.toonMenu {
+	transform:translatex(0);
+  }
+
+  nav a {
+	display:flex;
+	align-items:center;
+	column-gap:0.25em;
+	
+	border-bottom:solid 1px;
+  }
+  
+  nav a img {
+	width:auto;
+	height:2em;
+  }
+  
+  nav a.active {
+	font-weight:bold;
+  }
+
+  nav:focus-within, :checked + nav {
+	transform:translate(0);
+  }
+
+  
+
+
+  
+
+
+
+/* mediaquery gebruiken voor responsive */
+
+/* section:nth-of-type(4) > ul:nth-of-type(4) > li : hiermee spreek je de 4e section aan, de 4e ul in die section en dan de list items */
