@@ -23,27 +23,13 @@ function sluitMenu() {
 
 sluitButton.addEventListener("click", sluitMenu);
 
+//Code voor uitklapmenu (niet zeker of nodig is)
 
+// var highlights = document.querySelector("section:nth-of-type(3) button");
 
-/**********************************/
-/* bonus: menu sluiten met escape */
-/**********************************/
-//window.addEventListener("keydown", handleKeydown);
+// highlights.addEventListener("click", toggleEersteMenu);
 
-//function handleKeydown(event) {
-  //if (event.key == "Escape") {
-    //var deNav = document.querySelector("nav");
-    //deNav.classList.remove("toonMenu");
-  //}
-//}
-
-
-//uitklapmenu 
-var highlights = document.querySelector("section:nth-of-type(3) button");
-
-highlights.addEventListener("click", toggleEersteMenu);
-
-function toggleEersteMenu() {
-	var hetEersteMenu = document.querySelector("section:nth-of-type(3) ul");
-	hetEersteMenu.classList.toggle("open");
-}
+// function toggleEersteMenu() {
+// 	var hetEersteMenu = document.querySelector("section:nth-of-type(3) ul");
+// 	hetEersteMenu.classList.toggle("open");
+// }

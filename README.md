@@ -177,25 +177,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hij leest in mijn site 2x dezelfde tekst op (van een plaatje en een link) omdat de alt tekst hetzelfde is als de link S
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Hij leest in mijn site 2x dezelfde tekst op (van een plaatje en een link) omdat de alt tekst hetzelfde is als de link bij de foto. 
+  
+  Dit kan ik veranderen door de alt tekst weg te halen of aan te passen naar een beschrijving van de foto. 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  De tab is duidelijk, je kan goed zien waar je bent als je met het toetsenbord door de website navigeert. Wel tab je in het hamburger menu zonder dat je ziet dat je erin zit. 
+  
+  Dit kan worden opgelost door focus within toe te voegen aan het menu, zo gaat het hamburger menu open als je tab't en zie je waar je bent.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  ### Afbeelding toevoegen van focus state
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Alle foto's met tekst eronder zijn nu geheel klikbaar. Zo hoef je als je bijvoorbeeld parkinson, spasmes of een ander probleem hebt niet heel precies te klikken om naar die pagina te gaan. 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Er zat nog geen dark mode in de website, deze heb ik toegevoegd. Dit helpt mensen die gevoelig zijn voor fel licht. Ook heb ik het lettertype wat groter gemaakt dan op de huidige site zodat mensen met slechtere ogen de tekst beter kunnen lezen. 
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 

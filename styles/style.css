@@ -9,10 +9,6 @@ button, summary {
 	cursor: pointer;
 }
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -35,11 +31,6 @@ html {
 a:focus-visible {
 	background-color: hotpink;
 	border: 10px dashed hotpink;
-}
-
-header img {
-	width: 70px; 
-	height: 50px;
 }
 
 /* Algemene styling */
@@ -94,14 +85,31 @@ a:link {
 
 /* Styling eerste section */
 
-section:first-of-type p, .wit {  /* MAG DEZE CLASS ********************** */
+Body header h1{
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+section:first-of-type p {  
 	color: var(--color-text-sec1-2);
 	text-decoration: none;
 	text-align: center;
 }
 
+span {
+	display: block;
+	font-weight: bold;
+	font-size: 60 px;
+}
+
 section:first-of-type img {
 	display: block;
+	margin: auto;
 }
 
 div {
@@ -190,7 +198,7 @@ section:nth-of-type(4) h2 { /* HOE MARGIN KORTER SCHRIJVEN EN HOE STREEP ONDER '
 }
 
 section:nth-of-type(4) a {
-	border-style: solid ;
+	border: 2px solid black;
 	display: block;
 }
 
@@ -221,7 +229,6 @@ section:nth-of-type(5) a {
     flex-direction: column;
 	align-items: center;
 	margin: 0.9em;
-	background-color: #f9f9f9;
 }
 
 section:nth-of-type(5) li img {
@@ -264,13 +271,83 @@ footer {
 	color: #111;
 }
 
-.productpagina section:first-of-type img {
-	background-color: #f9f9f9;
+.productpagina section:first-of-type p:nth-of-type(2), p:nth-of-type(3) {
+	font-weight: bold;
+	font-size: 17px;
 }
+
+.productpagina section:first-of-type p:nth-of-type(4) {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+/* HOE KRIJG IK DIE TWEE LINKJES NAAST ELKAAR?*/
+
+.productpagina section:first-of-type a {
+	background-color: white;
+	justify-content: flex-start;
+}
+
+.productpagina section:first-of-type a img {
+	max-width: 30px;
+	max-height: 30px;
+	margin: 0;
+}
+
+/* Productfoto slider*/
+
+@keyframes slidy {
+	0% { left: 0%; }
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	75% { left: -300%; }
+	95% { left: -300%; }
+	100% { left: -400%; }
+	}
+	
+	* {
+	  box-sizing: border-box;
+	}
+
+	body, figure { 
+	  margin: 0;
+	}
+
+	section#image-slider { 
+	  width: 100%; 
+	  overflow: hidden; 
+	}
+
+	figure.slider { 
+	  position: relative; 
+	  width: 500%;
+	  font-size: 0; 
+	  animation: 30s slidy infinite; 
+	}
+
+	figure.slider figure { 
+	  width: 20%; 
+	  height: auto;
+	  display: inline-block;  
+	  position: inherit; 
+	}
+
+	figure.slider img { 
+		width: 100%; 
+		height: auto; 
+	}
+
+/* .productpagina section:first-of-type img {
+	background-color: #f9f9f9;
+} */
 
 /* Styling tweede section */
 
-.productpagina section:nth-of-type(2) > ul > li {  /*WAAROM WERKT DIT NIET*/
+.productpagina section:nth-of-type(2) > ul > li { 
 	display: list-item;
 	list-style-type: square;
 	margin-left: 1rem;
@@ -281,31 +358,9 @@ footer {
 	margin-left: 0;
 }
 
-/* Styling derde section, uitklapmenu highlights*/
+/* Styling derde section*/
 
-.productpagina section:nth-of-type(3) {
-	position:relative; /* zodat de button binnen de setcion blijft */
-}
 
-.productpagina section:nth-of-type(3) button {
-	position:absolute; 
-	top:0;
-}
-
-.productpagina section:nth-of-type(3) ul {
-	margin:0;
-	padding:0;
-	list-style:none;
-	
-	max-height:0; 
-	overflow:hidden; 
-	
-	transition:.3s; 
-}
-
-.productpagina section:nth-of-type(3) ul.open {
-	max-height:4em; 
-} 
 
 /* Styling vierde section */
 
@@ -336,6 +391,7 @@ section:nth-of-type(4) p {
 header {
 	position:sticky;
 	top:0;
+	z-index: 1;
 }
 
 header ul {
@@ -347,6 +403,11 @@ header ul {
 	align-items:center;
 	background-color: white;
 	opacity: 90%;
+}
+
+header img {
+	width: 70px; 
+	height: 50px;
 }
 
 header button {
@@ -420,9 +481,10 @@ header button {
 	font-weight:bold;
   }
 
-  nav:focus-within, :checked + nav {
+  /* WERKT NIET< DAN STAAT DE SLUIT BUTTON IN FOCUS EN GAAT HET MENU NIET MEER DICHT*
+   nav:focus-within, :checked + nav {
 	transform:translate(0);
-  }
+  } */ 
 
   
 
