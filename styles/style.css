@@ -41,6 +41,12 @@ body {
 	
 }
 
+.productpagina main {
+	padding: 1em;
+	max-width: 60em;
+	margin: auto;
+}
+
 p {
 	margin-top: 0.4rem;
 }
@@ -63,9 +69,12 @@ img {
 	max-width: 100%;
 }
 
-iframe {
-	max-width: 100%;
+iframe {  
+	width: 100%;
+	height: 100%;
+	max-width: 50em;
 	margin-top: 3rem;
+	aspect-ratio: 16/9;
 }
 
 ul {
@@ -85,6 +94,7 @@ a:link {
 
 /* Styling eerste section */
 
+/*Om h1 onzichtbaar te maken op een manier dat de screenreader het wel leest*/
 Body header h1{
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -122,6 +132,7 @@ section:first-of-type a:nth-of-type(2) {
 }
 
 /* buttons eerste sectie*/
+
 section:first-of-type a {
 	background-color: red;
 	color: white;
@@ -159,7 +170,6 @@ section:nth-of-type(2) li {
     justify-content: center;
 }
 
-
 /* Styling derde section */
 
 section:nth-of-type(3) ul {
@@ -182,6 +192,7 @@ section:nth-of-type(3) li img {
 
 section:nth-of-type(3) p {  /* WAAROM TWEEDE p IN DE LINK NIET RECHTS!!!??*/
 	text-align: left;
+	align-self: start;
 }
 
 /* Styling vierde section*/
@@ -210,6 +221,9 @@ section:nth-of-type(4) li {
 	margin: 10px;
 }
 
+section:nth-of-type(4) li:first-of-type {
+	margin: 0 10px 10px 10px;
+}
 section:nth-of-type(4) ul {
 	display: grid;	
 	grid-template-columns: 1fr 1fr;
@@ -256,11 +270,7 @@ footer {
 	color: #111;
 }
 
-.productpagina main {
-	margin: 1rem;
-}
-
-/* Styling eerste section, HOE AL DIE P'S STIJLEN ZONDER CLASSES?????????? */
+/* Styling eerste section*/
 
 .productpagina section:first-of-type {
 	background-color: white;
@@ -282,7 +292,9 @@ footer {
 	margin-top: 1em;
 }
 
-/* HOE KRIJG IK DIE TWEE LINKJES NAAST ELKAAR?*/
+.productpagina section:first-of-type ul:first-of-type {
+	display: flex;
+}
 
 .productpagina section:first-of-type a {
 	background-color: white;
@@ -309,36 +321,27 @@ footer {
 	100% { left: -400%; }
 	}
 	
-	* {
-	  box-sizing: border-box;
-	}
-
 	body, figure { 
 	  margin: 0;
 	}
 
-	section#image-slider { 
+	.productpagina section:first-of-type { 
 	  width: 100%; 
 	  overflow: hidden; 
 	}
 
-	figure.slider { 
-	  position: relative; 
-	  width: 500%;
-	  font-size: 0; 
-	  animation: 30s slidy infinite; 
+	.productpagina main section:first-of-type figure {
+		position: relative; 
+		width: 500%;
+		font-size: 0; 
+		animation: 30s slidy infinite; 
 	}
 
-	figure.slider figure { 
-	  width: 20%; 
-	  height: auto;
-	  display: inline-block;  
-	  position: inherit; 
-	}
-
-	figure.slider img { 
-		width: 100%; 
+	.productpagina main section:first-of-type figure img { 
 		height: auto; 
+		width: 20%; 
+		display: inline-block;  
+		position: inherit; 
 	}
 
 /* .productpagina section:first-of-type img {
