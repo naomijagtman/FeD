@@ -190,12 +190,12 @@ section:nth-of-type(3) li img {
 	height: 450px;
 }
 
-section:nth-of-type(3) p {  /* WAAROM TWEEDE p IN DE LINK NIET RECHTS!!!??*/
+section:nth-of-type(3) p { 
 	text-align: left;
 	align-self: start;
 }
 
-/* Styling vierde section*/
+/* Styling vierde section KIJKEN NAAR ANDERS STIJLEN GROOT SCHERM*/
 
 section:nth-of-type(4) h2 { /* HOE MARGIN KORTER SCHRIJVEN EN HOE STREEP ONDER 'FENDER FEED' WEG */
 	text-align: center;
@@ -246,8 +246,13 @@ section:nth-of-type(5) a {
 }
 
 section:nth-of-type(5) li img {
-	width: 250px;
-	height: 350px;
+	width: 200px;
+	height: 200px;
+}
+
+section:nth-of-type(5) p {  
+	text-align: left;
+	align-self: start;
 }
 
 footer {
@@ -276,9 +281,18 @@ footer {
 	background-color: white;
 }
 
+.productpagina section:first-of-type p:first-of-type {
+	font-weight: normal;
+}
+
+.productpagina section:first-of-type p:nth-of-type(7) {
+	max-width: 50em;
+}
+
 .productpagina section:first-of-type p {
 	text-align: left;
 	color: #111;
+	border: none;
 }
 
 .productpagina section:first-of-type p:nth-of-type(2), p:nth-of-type(3) {
@@ -292,6 +306,11 @@ footer {
 	margin-top: 1em;
 }
 
+.productpagina section:first-of-type p:nth-of-type(5) {
+	font-weight: normal;
+}
+
+/*kleuren links*/
 .productpagina section:first-of-type ul:first-of-type {
 	display: flex;
 }
@@ -308,7 +327,6 @@ footer {
 }
 
 /* Productfoto slider*/
-
 @keyframes slidy {
 	0% { left: 0%; }
 	20% { left: 0%; }
@@ -344,11 +362,16 @@ footer {
 		position: inherit; 
 	}
 
+
 /* .productpagina section:first-of-type img {
 	background-color: #f9f9f9;
 } */
 
 /* Styling tweede section */
+
+.productpagina section:nth-of-type(2) > ul {
+	display: block;
+}
 
 .productpagina section:nth-of-type(2) > ul > li { 
 	display: list-item;
@@ -363,17 +386,97 @@ footer {
 
 /* Styling derde section*/
 
+details img {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
 
+
+details summary {
+	font-size: 18px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+	/* list-style: none; */
+	padding: 2px 6px;
+    border-bottom: 1px solid;
+	max-width: 44.5em;
+}
+
+.productpagina section:nth-last-of-type(3) details p:first-of-type, p:nth-of-type(3), p:nth-of-type(5){ 
+	font-weight: bold;
+	padding-bottom: 1em;
+	border-bottom: 1px solid;
+	max-width: 50em;
+	font-size: 16px;
+}
+
+details p:nth-of-type(2), p:nth-of-type(4), p:nth-of-type(6){
+	max-width: 50em;
+}
+
+/* .productpagina details:nth-of-type(2) > img {
+   display: block;
+   margin-left: 10em;
+} */
+
+.productpagina details:nth-of-type(2) p, p:first-of-type {
+	font-weight: bold;
+	border-bottom: 1px solid;
+	padding-bottom: 1em;
+	max-width: 50em;
+}
+
+table td {
+	padding: 0 3em 1em 0;
+	border-bottom: 1px solid;
+	
+}
+
+table th {
+	display: none;
+}
+
+tr td:first-of-type, td:nth-of-type(3), td:nth-of-type(5),td:nth-of-type(7) {
+	font-weight: bold;
+}
 
 /* Styling vierde section */
 
-.productpagina section:nth-of-type(4) h2 {
+.productpagina section:nth-of-type(4) ul {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(175px, 1fr) ); 
+}
+
+.productpagina section:nth-of-type(4) a {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	margin: 0;
+	border-style: none;
+}
+
+.productpagina section:nth-of-type(4) li img {
+	width: 200px;
+	height: 200px;
+}
+
+.productpagina section:nth-of-type(4) p {  
+	text-align: left;
+	align-self: start;
+}
+
+ .productpagina section:nth-of-type(4) h2 {
 	color: black;
 	background-color: white;
 	text-decoration-style: dotted;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
 }
 
-section:nth-of-type(4) p {
+/*section:nth-of-type(4) p {
 	font-size: small;
 }
 
@@ -384,10 +487,11 @@ section:nth-of-type(4) p {
 	border-style: none;
 }
 
-.productpagina section:nth-of-type(4) li img {  
-	width: 100px;
-	height: 200px;
-}
+.productpagina section:nth-of-type(4) ul { 
+    display: grid;	
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) ); 
+} */
 
 /* Styling hamburger menu  NOG MOOI MAKEN EN LINKJES GOED ZETTEN IN HTML. KAN RESPONSIVE ALS TIJD OVER*/ 
 
@@ -489,6 +593,83 @@ header button {
 	transform:translate(0);
   } */ 
 
+  /*Styling footer*/
+
+ footer {
+	padding: 1em;
+ }
+  
+ form {
+	display:flex;
+  	flex-direction:row;
+	border:1px solid white;
+	padding: 1em;
+	background-color: black;
+ }
+ 
+ form input {
+	color: white;
+	background-color: black;
+	width: 90vw;
+	border-style: hidden;
+  }
+
+  form input::placeholder {
+	color: white;
+	font-size: 16px;
+	
+  }
+
+  form button {
+	border-color: red;
+	color: white;
+	background-color: red;
+	font-weight: bold;
+	font-size:16px;
+	width: 10em;
+	padding: 0.5em;
+
+  }
+
+  footer img:first-of-type {
+	width: 120px; 
+	height: 120px;
+  }
+
+  footer p {
+	color: white;
+	text-align: left;
+	margin-bottom: 2em;
+	margin-top: 0;
+  }
+
+  footer div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+	padding: 0;
+	margin-top: 1em;
+  }
+
+  footer ul {
+	margin-right: 5em;
+  }
+
+  footer ul li a {
+	color: white;
+  }
+
+ footer h4{
+	font-size: 25px;
+ } 
+ 
+ footer h5 {
+	margin-bottom: 1em;
+	font-size: 16px;
+  }
+
+  
+  
   
 
 
