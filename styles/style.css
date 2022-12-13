@@ -187,13 +187,12 @@ section:first-of-type > div > a:nth-of-type(2):hover {
 
 /* Styling tweede section */
 
-section:nth-of-type(2) h3 {
+section:nth-of-type(2)>ul>li>a>p {
 	color: var(--color-wit);
 }
 
-section:nth-of-type(2)>ul>li>a>p,
-h3 {
-	color: var(--color-wit);
+section:nth-of-type(2)>ul>li>a>p:first-of-type {
+	font-weight: bold;
 }
 
 section:nth-of-type(2) a {
@@ -219,11 +218,12 @@ section:nth-of-type(2) li {
 	justify-content: center;
 }
 
+/* Styling derde section */
+
 section:nth-of-type(3) > ul > li > a > p {
 	margin-bottom: 0.5em;
 }
 
-/* Styling derde section */
 
 section:nth-of-type(3) ul {
 	display: grid;
@@ -251,10 +251,15 @@ section:nth-of-type(3) li img {
 	height: 450px;
 }
 
-section:nth-of-type(3) p {
+section:nth-of-type(3) > ul > li > a > p {
 	text-align: left;
 	align-self: start;
 	border-style: none;
+	color: var(--color-zwart);
+}
+
+section:nth-of-type(3) > ul > li > a > p:nth-of-type(2) {
+	font-weight: bold;
 }
 
 /* section:nth-of-type(3) > ul > li {
@@ -283,10 +288,13 @@ section:nth-of-type(4)>ul>li>a {
 	transition: .3s;
 }
 
-section:nth-of-type(4) h3,
-p {
+section:nth-of-type(4) p {
 	color: var(--color-zwart);
 	border-style: none;
+}
+
+section:nth-of-type(4) > ul > li > a > p:nth-of-type(2) {
+	font-weight: bold;
 }
 
 /*WAAROM WERKT DIT NIET*/
@@ -371,6 +379,11 @@ section:nth-of-type(5) > ul > li > a > p {
 	margin-bottom: 0.5em;
 	text-align: left;
 	align-self: start;
+	color: var(--color-zwart);
+}
+
+section:nth-of-type(5) > ul > li > a > p:nth-of-type(2) {
+	font-weight: bold;
 }
 
 /*STYLING PRODUCTPAGINA **************************************************************************************************************************************/
@@ -857,6 +870,7 @@ footer form {
 	border: 1px solid var(--color-wit);
 	padding: 1em;
 	background-color: var(--color-zwart);
+	margin-bottom: 3em;
 }
 
 footer form input {
@@ -914,19 +928,23 @@ footer div {
 
 footer ul {
 	margin-right: 5em;
+	margin-bottom: 2em;
 }
 
 footer ul li a {
 	color: var(--color-wit);
 }
 
-footer h4 {
+footer > p:first-of-type {
 	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 1.5em;
 }
 
-footer h5 {
-	margin-bottom: 1em;
+footer > div > ul > li > p {
 	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 0.5em;
 }
 
 /*DARK MODE NOG AANPASSEN******************************************************************/
