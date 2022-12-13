@@ -28,9 +28,12 @@ html {
 }
 
 /*NOG AANPASSEN */
+a:focus {
+	transform: scale(1.01);
+}
+
 a:focus-visible {
-	background-color: hotpink;
-	border: 10px dashed hotpink;
+	border: 3px solid violet;
 }
 
 /* Algemene styling */
@@ -119,12 +122,13 @@ span {
 
 section:first-of-type img {
 	display: block;
-	margin: auto;
+	/* margin: auto; */
 }
 
 div {
 	background-color: black;
 	padding: 3em;
+	width: 100%;
 }
 
 section:first-of-type a:nth-of-type(2) {
@@ -141,8 +145,34 @@ section:first-of-type a {
 	padding: 0.3em;
 	display: flex;
 	justify-content: center;
+	transition: .5s;
 }
 
+section:first-of-type a:first-of-type:hover {
+	color: black;
+	font-weight: bold;
+	font-size: 30px;
+	transition: .5s;
+} 
+
+section:first-of-type a:nth-of-type(2):hover {
+	font-weight: bold;
+	font-size: 30px;
+	transition: .5s;
+}
+
+@media(min-width: 740px) {
+	.foto {
+		display: grid;	
+		grid-template-columns: 3fr 4fr;
+		background-color: black;
+	} 
+
+	div {
+		margin: auto;
+	}
+}
+	
 /* Styling tweede section */
 
 section:nth-of-type(2) h3 {
@@ -156,6 +186,12 @@ section:nth-of-type(2) > ul > li > a > p, h3 {
 section:nth-of-type(2) a {
 	background-color: red;
 	margin: 0.8em;
+	transition: .5s;
+}
+
+section:nth-of-type(2) a:hover {
+	background-color: #111;
+	transition: .5s;
 }
 
 section:nth-of-type(2) ul {
@@ -183,6 +219,11 @@ section:nth-of-type(3) a {
     flex-direction: column;
 	align-items: center;
 	margin: 0.9em;
+	transition: .5s;
+}
+
+section:nth-of-type(3) a:hover {
+	transform: scale(1.05);
 }
 
 section:nth-of-type(3) li img {
@@ -193,6 +234,7 @@ section:nth-of-type(3) li img {
 section:nth-of-type(3) p { 
 	text-align: left;
 	align-self: start;
+	border-style: none;
 }
 
 /* Styling vierde section KIJKEN NAAR ANDERS STIJLEN GROOT SCHERM*/
@@ -211,10 +253,23 @@ section:nth-of-type(4) h2 { /* HOE MARGIN KORTER SCHRIJVEN EN HOE STREEP ONDER '
 section:nth-of-type(4) a {
 	border: 2px solid black;
 	display: block;
+	transition: .5s;
 }
 
 section:nth-of-type(4) h3, p {
 	color: #111;
+	border-style: none;
+}
+
+/*WAAROM WERKT DIT NIET*/
+section:nth-of-type(4) a:hover {  
+	background-color: black;
+	color: white;
+	transition: .5s;
+}
+
+section:nth-of-type(4) a:focus-visible {
+	border: 5px solid violet;
 }
 
 section:nth-of-type(4) li {
@@ -243,6 +298,11 @@ section:nth-of-type(5) a {
     flex-direction: column;
 	align-items: center;
 	margin: 0.9em;
+	transition: .5s;
+}
+
+section:nth-of-type(5) a:hover {
+	transform: scale(1.05);
 }
 
 section:nth-of-type(5) li img {
@@ -254,13 +314,6 @@ section:nth-of-type(5) p {
 	text-align: left;
 	align-self: start;
 }
-
-footer {
-	background-color: #111;
-	color: white;
-	Padding: 3em;
-}
-
 
 /*STYLING PRODUCTPAGINA **************************************************************************************************************************************/
 
@@ -377,7 +430,7 @@ footer {
 	display: list-item;
 	list-style-type: square;
 	margin-left: 1rem;
-	margin-top: 0.5rem;;
+	margin-top: 0.5rem;
 }
 
 .productpagina section:nth-of-type(2) h2 {
@@ -391,7 +444,6 @@ details img {
 	margin-bottom: 1em;
 }
 
-
 details summary {
 	font-size: 18px;
 	margin-top: 0.5em;
@@ -401,12 +453,26 @@ details summary {
 	padding: 2px 6px;
     border-bottom: 1px solid;
 	max-width: 44.5em;
+	transition: .2s;
 }
 
-.productpagina section:nth-last-of-type(3) details p:first-of-type, p:nth-of-type(3), p:nth-of-type(5){ 
+details summary:hover {
+	color: red;
+	border-bottom: 1px solid black;
+	transition: .2s;
+}
+
+details summary:focus-visible {
+		border: 3px solid violet;
+}
+
+details:first-of-type {
+	margin-top: 2.5em;
+}
+
+.productpagina section:nth-of-type(3) details p:first-of-type, p:nth-of-type(3), p:nth-of-type(5){ 
 	font-weight: bold;
 	padding-bottom: 1em;
-	border-bottom: 1px solid;
 	max-width: 50em;
 	font-size: 16px;
 }
@@ -420,7 +486,7 @@ details p:nth-of-type(2), p:nth-of-type(4), p:nth-of-type(6){
    margin-left: 10em;
 } */
 
-.productpagina details:nth-of-type(2) p, p:first-of-type {
+.productpagina details:nth-of-type(2) p {
 	font-weight: bold;
 	border-bottom: 1px solid;
 	padding-bottom: 1em;
@@ -446,7 +512,8 @@ tr td:first-of-type, td:nth-of-type(3), td:nth-of-type(5),td:nth-of-type(7) {
 .productpagina section:nth-of-type(4) ul {
 	display: grid;	
 	grid-template-columns: 1fr 1fr;
-	grid-template-columns: repeat(auto-fit, minmax(175px, 1fr) ); 
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) ); 
+	max-width: 50em;
 }
 
 .productpagina section:nth-of-type(4) a {
@@ -455,6 +522,16 @@ tr td:first-of-type, td:nth-of-type(3), td:nth-of-type(5),td:nth-of-type(7) {
 	align-items: center;
 	margin: 0;
 	border-style: none;
+	transition: .5s;
+}
+
+.productpagina section:nth-of-type(4) a:hover {
+	transform: scale(1.05);
+	background-color: white;
+}
+
+.productpagina section:nth-of-type(4) a:focus-visible {
+	border: 3px solid violet;
 }
 
 .productpagina section:nth-of-type(4) li img {
@@ -493,12 +570,20 @@ tr td:first-of-type, td:nth-of-type(3), td:nth-of-type(5),td:nth-of-type(7) {
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) ); 
 } */
 
-/* Styling hamburger menu  NOG MOOI MAKEN EN LINKJES GOED ZETTEN IN HTML. KAN RESPONSIVE ALS TIJD OVER*/ 
+/* Styling header en hamburger menu  NOG MOOI MAKEN EN LINKJES GOED ZETTEN IN HTML. KAN RESPONSIVE ALS TIJD OVER*/ 
 
 header {
 	position:sticky;
 	top:0;
 	z-index: 1;
+}
+
+header a {
+	transition: .2s;
+}
+
+header a:hover {
+	transform: scale(1.05);
 }
 
 header ul {
@@ -513,8 +598,20 @@ header ul {
 }
 
 header img {
-	width: 70px; 
 	height: 50px;
+	transition: .2s;
+}
+
+header img:hover {
+	transform: scale(1.1);
+}
+
+header li:nth-of-type(3) a img {
+	width: 20px;
+}
+
+header li:nth-of-type(4) a img {
+	width: 25px;
 }
 
 header button {
@@ -528,17 +625,23 @@ header button {
 	border-radius:.25em; 
 	font:inherit;
 	text-align:center;
+	background-color: white;
   }
   
   header button img {
-	height:1.5em;
+	height:2em;
+	width: 3em;
+  }
+
+  nav > button img {
+	height: 1.5em;
 	width: 2em;
   }
 
-  header > button {
+  /* header > button {
 	order:-1;
   }
-  
+   */
   nav button {
 	justify-self:start;
    }
@@ -550,13 +653,10 @@ header button {
 	gap:1em;
 	position:fixed;
 	left:0;
-	right:0;
 	top:0;
-	bottom:0;
 	background-color: white;
 	
 	transform:translatex(-100%);
-	
 	transition:transform .3s;
   }
 
@@ -566,17 +666,23 @@ header button {
 	align-items: flex-start;
 	gap: 1em;
   }
+
+  nav ul li p {
+	font-weight: bold;
+  }
   
   nav.toonMenu {
 	transform:translatex(0);
+	padding: 0.5em 0.5em 2em 0.5em;
+	box-shadow: 0 20px 30px 0 rgb(0 0 0);
   }
 
   nav a {
-	display:flex;
-	align-items:center;
-	column-gap:0.25em;
-	
-	border-bottom:solid 1px;
+	display: block;
+	color: black;
+  	border-bottom: 1px solid;
+	padding-right: 4em;
+	width: 50vw;
   }
   
   nav a img {
@@ -597,9 +703,11 @@ header button {
 
  footer {
 	padding: 1em;
+	background-color: #111;
+	color: white;
  }
   
- form {
+ footer form {
 	display:flex;
   	flex-direction:row;
 	border:1px solid white;
@@ -607,20 +715,20 @@ header button {
 	background-color: black;
  }
  
- form input {
+ footer form input {
 	color: white;
 	background-color: black;
 	width: 90vw;
 	border-style: hidden;
   }
 
-  form input::placeholder {
+  footer form input::placeholder {
 	color: white;
 	font-size: 16px;
 	
   }
 
-  form button {
+  footer form button {
 	border-color: red;
 	color: white;
 	background-color: red;
@@ -628,7 +736,16 @@ header button {
 	font-size:16px;
 	width: 10em;
 	padding: 0.5em;
+	transition: .5s;
 
+  }
+
+  footer form button:hover {
+	color: red;
+	font-size: 18px;
+	background-color: white;
+	border-color: white;
+	transition: scale(1.2);
   }
 
   footer img:first-of-type {
@@ -659,7 +776,7 @@ header button {
 	color: white;
   }
 
- footer h4{
+ footer h4 {
 	font-size: 25px;
  } 
  
@@ -668,7 +785,40 @@ header button {
 	font-size: 16px;
   }
 
+  /*DARK MODE NOG AANPASSEN******************************************************************/
+
+  @media (prefers-color-scheme:dark) {
+	:root:not(.lightMode) {
+	  /* general */
+	  --generalBackground:black;
+	  --generalColor:Gainsboro;
+	  --generalColorHigherContrast:White;
+	  
+	  /* header */
+	  --headerBackground:
+		linear-gradient(
+		  135deg, 
+		  #0000FF99 10%, 
+		  #8B008B99,
+		  #8B000099, 
+		  #FF450099 90%
+		);
+	  
+	  --labelBackground:#0008;
+	  
+	  /* card */
+	  --cardBackground:linear-gradient(135deg, #444 50%, #222);
+	  --cardBoxShadow:0 0 1em #111c;
   
+	  /* image */
+	  --imageBorderRadius:.5em;
+	  --imageBrightness:.85;
+	  
+	  /* button */
+	  --buttonBackground:linear-gradient(135deg, SlateBlue 25%, DarkSlateBlue 75%);
+	  --buttonBackgroundActive:linear-gradient(135deg, DarkViolet 25%, DarkMagenta 75%);
+	}
+  }
   
   
 

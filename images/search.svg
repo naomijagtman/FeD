@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-wrapper-44px</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.501088,19.9894409 C14.501088,16.9638104 16.9638104,14.501088 19.9894409,14.501088 C23.0150713,14.501088 25.4777938,16.9638104 25.4777938,19.9894409 C25.4777938,23.0150713 23.0150713,25.4777938 19.9894409,25.4777938 C16.9638104,25.4777938 14.501088,23.0150713 14.501088,19.9894409 L14.501088,19.9894409 Z M31.9699993,30.8019652 L25.4777938,24.3097597 C26.4159738,23.1182711 26.9788818,21.6171832 26.9788818,19.9894409 C26.9788818,16.1335212 23.8453606,13 19.9894409,13 C16.1335212,13 13,16.1335212 13,19.9894409 C13,23.8453606 16.1335212,26.9788818 19.9894409,26.9788818 C21.6078014,26.9788818 23.0948166,26.4253556 24.2816143,25.5012483 L30.7785107,31.9981447 L31.9699993,30.8019652 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation/Desktop/header-1440" transform="translate(-1335.000000, -23.000000)">
+            <g id="right-button-group" transform="translate(1186.000000, 0.000000)">
+                <g id="refactor/nav/nav-icon-button" transform="translate(126.000000, 0.000000)">
+                    <g id="icon-wrapper-44px">
+                        <g transform="translate(10.000000, 10.000000)">
+                            <g id="icons/44px/magnifying-glass">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="artwork" fill="#666666" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <g id="solid/grayscale/4a4a4a-dark-gray" mask="url(#mask-2)" fill="#4A4A4A" fill-rule="evenodd">
+                                    <rect id="fill" x="0" y="0" width="44" height="44"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
