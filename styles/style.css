@@ -127,8 +127,9 @@ span {
 	margin-top: 0.3em;
 }
 
-section:first-of-type img {
+section:first-of-type > picture > img {
 	display: block;
+	/* object-fit: cover; */
 }
 
 div {
@@ -167,10 +168,10 @@ section:first-of-type > div > a:nth-of-type(2):hover {
 	transition: .5s;
 }  
 
-@media(min-width: 740px) {
+@media(min-width: 900px) {
 	.foto {
 		display: grid;
-		grid-template-columns: 3fr 4fr;
+		grid-template-columns: 2fr 1fr;
 		background-color: var(--color-zwart);
 	}
 
@@ -442,6 +443,10 @@ p:nth-of-type(3) {
 	margin-left: 0;
 }
 
+.productpagina section:first-of-type > ul > li {
+	margin-right: 0.5em;
+}
+
 /* .productpagina section:first-of-type a:hover {
 	scale:(1.7);
 } */
@@ -632,7 +637,7 @@ td:nth-of-type(7) {
 /* Styling vierde section */
 
 .productpagina section:nth-of-type(4) li:first-of-type,
-section:nth-of-type(4) li:nth-of-type(2) {
+.productpagina section:nth-of-type(4) > ul> li:nth-of-type(2) {
 	top: 0;
 }
 
