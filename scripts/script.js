@@ -22,14 +22,3 @@ function sluitMenu() {
 } 
 
 sluitButton.addEventListener("click", sluitMenu);
-
-//Code voor uitklapmenu (niet zeker of nodig is)
-
-// var highlights = document.querySelector("section:nth-of-type(3) button");
-
-// highlights.addEventListener("click", toggleEersteMenu);
-
-// function toggleEersteMenu() {
-// 	var hetEersteMenu = document.querySelector("section:nth-of-type(3) ul");
-// 	hetEersteMenu.classList.toggle("open");
-// }
